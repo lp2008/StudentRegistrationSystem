@@ -13,6 +13,7 @@
 		5312D0A126CD862700B5EBA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5312D09F26CD862700B5EBA0 /* Main.storyboard */; };
 		5312D0A326CD862700B5EBA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5312D0A226CD862700B5EBA0 /* Assets.xcassets */; };
 		5312D0A626CD862700B5EBA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5312D0A426CD862700B5EBA0 /* LaunchScreen.storyboard */; };
+		550F5218C9842DA1234A8F97 /* Pods_Student_Registration_System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32502ECA1C2A41C274ACCAF /* Pods_Student_Registration_System.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		5312D0A226CD862700B5EBA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5312D0A526CD862700B5EBA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5312D0A726CD862700B5EBA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66F3A5017113A793108CEDCC /* Pods-Student Registration System.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Registration System.release.xcconfig"; path = "Target Support Files/Pods-Student Registration System/Pods-Student Registration System.release.xcconfig"; sourceTree = "<group>"; };
+		E32502ECA1C2A41C274ACCAF /* Pods_Student_Registration_System.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Student_Registration_System.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8CC563277CCE143CFDDA21F /* Pods-Student Registration System.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Registration System.debug.xcconfig"; path = "Target Support Files/Pods-Student Registration System/Pods-Student Registration System.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				550F5218C9842DA1234A8F97 /* Pods_Student_Registration_System.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				5312D09826CD862700B5EBA0 /* Student Registration System */,
 				5312D09726CD862700B5EBA0 /* Products */,
+				EBA6826CD7426D5A40713222 /* Pods */,
+				95B9D43846E8D43B21E52F97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = "Student Registration System";
 			sourceTree = "<group>";
 		};
+		95B9D43846E8D43B21E52F97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E32502ECA1C2A41C274ACCAF /* Pods_Student_Registration_System.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBA6826CD7426D5A40713222 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F8CC563277CCE143CFDDA21F /* Pods-Student Registration System.debug.xcconfig */,
+				66F3A5017113A793108CEDCC /* Pods-Student Registration System.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5312D0AA26CD862700B5EBA0 /* Build configuration list for PBXNativeTarget "Student Registration System" */;
 			buildPhases = (
+				7C8DB1D08CDDB1DD0C6B0E3C /* [CP] Check Pods Manifest.lock */,
 				5312D09226CD862700B5EBA0 /* Sources */,
 				5312D09326CD862700B5EBA0 /* Frameworks */,
 				5312D09426CD862700B5EBA0 /* Resources */,
+				69C0B2C4799DE6C04874E6FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69C0B2C4799DE6C04874E6FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Student Registration System/Pods-Student Registration System-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Student Registration System/Pods-Student Registration System-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Student Registration System/Pods-Student Registration System-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C8DB1D08CDDB1DD0C6B0E3C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Student Registration System-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5312D09226CD862700B5EBA0 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		5312D0AB26CD862700B5EBA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8CC563277CCE143CFDDA21F /* Pods-Student Registration System.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +373,7 @@
 		};
 		5312D0AC26CD862700B5EBA0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66F3A5017113A793108CEDCC /* Pods-Student Registration System.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

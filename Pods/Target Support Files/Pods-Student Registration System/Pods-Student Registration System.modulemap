@@ -1,0 +1,6 @@
+framework module Pods_Student_Registration_System {
+  umbrella header "Pods-Student Registration System-umbrella.h"
+
+  export *
+  module * { export * }
+}
