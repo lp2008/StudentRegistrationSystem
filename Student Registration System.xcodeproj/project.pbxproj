@@ -21,6 +21,7 @@
 		5312D0C226CD890800B5EBA0 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D0C126CD890800B5EBA0 /* RouterProtocol.swift */; };
 		5312D0C426CD891B00B5EBA0 /* Drawable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D0C326CD891B00B5EBA0 /* Drawable.swift */; };
 		5312D0C626CD8B7300B5EBA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5312D0C526CD8B7300B5EBA0 /* Main.storyboard */; };
+		5312D0C826CDA4A900B5EBA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D0C726CDA4A900B5EBA0 /* User.swift */; };
 		550F5218C9842DA1234A8F97 /* Pods_Student_Registration_System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32502ECA1C2A41C274ACCAF /* Pods_Student_Registration_System.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		5312D0C126CD890800B5EBA0 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		5312D0C326CD891B00B5EBA0 /* Drawable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawable.swift; sourceTree = "<group>"; };
 		5312D0C526CD8B7300B5EBA0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5312D0C726CDA4A900B5EBA0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		66F3A5017113A793108CEDCC /* Pods-Student Registration System.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Registration System.release.xcconfig"; path = "Target Support Files/Pods-Student Registration System/Pods-Student Registration System.release.xcconfig"; sourceTree = "<group>"; };
 		E32502ECA1C2A41C274ACCAF /* Pods_Student_Registration_System.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Student_Registration_System.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CC563277CCE143CFDDA21F /* Pods-Student Registration System.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Registration System.debug.xcconfig"; path = "Target Support Files/Pods-Student Registration System/Pods-Student Registration System.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		5312D0AF26CD87C000B5EBA0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5312D0C726CDA4A900B5EBA0 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				5312D0B326CD884D00B5EBA0 /* Coordinator.swift in Sources */,
 				5312D0B526CD886300B5EBA0 /* BaseCoordinator.swift in Sources */,
 				5312D0C426CD891B00B5EBA0 /* Drawable.swift in Sources */,
+				5312D0C826CDA4A900B5EBA0 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
