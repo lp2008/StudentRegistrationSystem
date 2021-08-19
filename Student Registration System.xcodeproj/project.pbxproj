@@ -37,6 +37,13 @@
 		5312D0EB26CE471500B5EBA0 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D0EA26CE471500B5EBA0 /* ChangePasswordViewModel.swift */; };
 		5312D0ED26CE472100B5EBA0 /* ChangePasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D0EC26CE472100B5EBA0 /* ChangePasswordCoordinator.swift */; };
 		5312D0F026CE47F700B5EBA0 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D0EF26CE47F700B5EBA0 /* ServerResponse.swift */; };
+		5312D0F626CE55D700B5EBA0 /* DeleteUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D0F426CE55D700B5EBA0 /* DeleteUserViewController.swift */; };
+		5312D0F726CE55D700B5EBA0 /* DeleteUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5312D0F526CE55D700B5EBA0 /* DeleteUserViewController.xib */; };
+		5312D0FA26CE55EE00B5EBA0 /* DeleteUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D0F926CE55EE00B5EBA0 /* DeleteUserViewModel.swift */; };
+		5312D0FD26CE568400B5EBA0 /* UserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D0FC26CE568400B5EBA0 /* UserResponse.swift */; };
+		5312D10026CE58C800B5EBA0 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D0FE26CE58C800B5EBA0 /* UserTableViewCell.swift */; };
+		5312D10126CE58C800B5EBA0 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5312D0FF26CE58C800B5EBA0 /* UserTableViewCell.xib */; };
+		5312D10326CE5C0400B5EBA0 /* DeleteUserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D10226CE5C0400B5EBA0 /* DeleteUserCoordinator.swift */; };
 		550F5218C9842DA1234A8F97 /* Pods_Student_Registration_System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32502ECA1C2A41C274ACCAF /* Pods_Student_Registration_System.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +80,13 @@
 		5312D0EA26CE471500B5EBA0 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
 		5312D0EC26CE472100B5EBA0 /* ChangePasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordCoordinator.swift; sourceTree = "<group>"; };
 		5312D0EF26CE47F700B5EBA0 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		5312D0F426CE55D700B5EBA0 /* DeleteUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserViewController.swift; sourceTree = "<group>"; };
+		5312D0F526CE55D700B5EBA0 /* DeleteUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteUserViewController.xib; sourceTree = "<group>"; };
+		5312D0F926CE55EE00B5EBA0 /* DeleteUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserViewModel.swift; sourceTree = "<group>"; };
+		5312D0FC26CE568400B5EBA0 /* UserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponse.swift; sourceTree = "<group>"; };
+		5312D0FE26CE58C800B5EBA0 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		5312D0FF26CE58C800B5EBA0 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		5312D10226CE5C0400B5EBA0 /* DeleteUserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserCoordinator.swift; sourceTree = "<group>"; };
 		66F3A5017113A793108CEDCC /* Pods-Student Registration System.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Registration System.release.xcconfig"; path = "Target Support Files/Pods-Student Registration System/Pods-Student Registration System.release.xcconfig"; sourceTree = "<group>"; };
 		E32502ECA1C2A41C274ACCAF /* Pods_Student_Registration_System.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Student_Registration_System.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CC563277CCE143CFDDA21F /* Pods-Student Registration System.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Registration System.debug.xcconfig"; path = "Target Support Files/Pods-Student Registration System/Pods-Student Registration System.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +125,7 @@
 		5312D09826CD862700B5EBA0 /* Student Registration System */ = {
 			isa = PBXGroup;
 			children = (
+				5312D0F226CE55BB00B5EBA0 /* Delete User */,
 				5312D0E326CE457100B5EBA0 /* Change Password */,
 				5312D0D826CE3E3B00B5EBA0 /* Menu */,
 				5312D0AD26CD87B300B5EBA0 /* Login */,
@@ -274,6 +289,44 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		5312D0F226CE55BB00B5EBA0 /* Delete User */ = {
+			isa = PBXGroup;
+			children = (
+				5312D0FB26CE567600B5EBA0 /* Model */,
+				5312D0F826CE55DC00B5EBA0 /* View Model */,
+				5312D0F326CE55C600B5EBA0 /* View */,
+				5312D10226CE5C0400B5EBA0 /* DeleteUserCoordinator.swift */,
+			);
+			path = "Delete User";
+			sourceTree = "<group>";
+		};
+		5312D0F326CE55C600B5EBA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5312D0F426CE55D700B5EBA0 /* DeleteUserViewController.swift */,
+				5312D0F526CE55D700B5EBA0 /* DeleteUserViewController.xib */,
+				5312D0FE26CE58C800B5EBA0 /* UserTableViewCell.swift */,
+				5312D0FF26CE58C800B5EBA0 /* UserTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5312D0F826CE55DC00B5EBA0 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				5312D0F926CE55EE00B5EBA0 /* DeleteUserViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		5312D0FB26CE567600B5EBA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5312D0FC26CE568400B5EBA0 /* UserResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		95B9D43846E8D43B21E52F97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,7 +403,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5312D10126CE58C800B5EBA0 /* UserTableViewCell.xib in Resources */,
 				5312D0A626CD862700B5EBA0 /* LaunchScreen.storyboard in Resources */,
+				5312D0F726CE55D700B5EBA0 /* DeleteUserViewController.xib in Resources */,
 				5312D0A326CD862700B5EBA0 /* Assets.xcassets in Resources */,
 				5312D0DD26CE3E4C00B5EBA0 /* MenuViewController.xib in Resources */,
 				5312D0BD26CD88C700B5EBA0 /* LoginViewController.xib in Resources */,
@@ -422,13 +477,18 @@
 				5312D0B726CD887700B5EBA0 /* AppCoordinator.swift in Sources */,
 				5312D0D726CE3CA400B5EBA0 /* Utils.swift in Sources */,
 				5312D0F026CE47F700B5EBA0 /* ServerResponse.swift in Sources */,
+				5312D10326CE5C0400B5EBA0 /* DeleteUserCoordinator.swift in Sources */,
 				5312D0B326CD884D00B5EBA0 /* Coordinator.swift in Sources */,
 				5312D0B526CD886300B5EBA0 /* BaseCoordinator.swift in Sources */,
+				5312D10026CE58C800B5EBA0 /* UserTableViewCell.swift in Sources */,
 				5312D0C426CD891B00B5EBA0 /* Drawable.swift in Sources */,
+				5312D0FD26CE568400B5EBA0 /* UserResponse.swift in Sources */,
 				5312D0DC26CE3E4C00B5EBA0 /* MenuViewController.swift in Sources */,
+				5312D0FA26CE55EE00B5EBA0 /* DeleteUserViewModel.swift in Sources */,
 				5312D0CE26CDA5CA00B5EBA0 /* AppConstants.swift in Sources */,
 				5312D0C826CDA4A900B5EBA0 /* User.swift in Sources */,
 				5312D0ED26CE472100B5EBA0 /* ChangePasswordCoordinator.swift in Sources */,
+				5312D0F626CE55D700B5EBA0 /* DeleteUserViewController.swift in Sources */,
 				5312D0E226CE408F00B5EBA0 /* MenuCoordinator.swift in Sources */,
 				5312D0D026CDA6DA00B5EBA0 /* ApiService.swift in Sources */,
 				5312D0CB26CDA59D00B5EBA0 /* ApiTarget.swift in Sources */,

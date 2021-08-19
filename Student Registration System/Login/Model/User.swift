@@ -23,6 +23,7 @@ struct User: Decodable {
     let name: String?
     let role: String?
     let email: String?
+    let photo: String?
 }
 
 struct Valid {

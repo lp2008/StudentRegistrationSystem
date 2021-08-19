@@ -11,6 +11,8 @@ import Foundation
 enum ApiTarget {
     case login(params: [String: Any])
     case changePassword(params: [String: Any])
+    case deleteUser(params: [String: Any])
+    case getUserList
 }
 
 extension ApiTarget: TargetType {
@@ -25,6 +27,10 @@ extension ApiTarget: TargetType {
             return "/users/signin"
         case .changePassword:
             return "/users/changePassword"
+        case .deleteUser:
+            return "/users/deleteUser"
+        case .getUserList:
+            return "/users/getUserList"
         }
     }
     
@@ -34,6 +40,8 @@ extension ApiTarget: TargetType {
             return .post
         case .changePassword:
             return .put
+        case .deleteUser:
+            return .delete
         default:
             return .get
         }
@@ -45,8 +53,10 @@ extension ApiTarget: TargetType {
     
     var task: Task {
         switch self {
-        case .login(let params), .changePassword(let params):
+        case .login(let params), .changePassword(let params), .deleteUser(let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .getUserList:
+            return .requestPlain
         }
     }
     
@@ -58,7 +68,7 @@ extension ApiTarget: TargetType {
 extension ApiTarget: AccessTokenAuthorizable {
     var authorizationType: AuthorizationType? {
         switch self {
-        case .changePassword:
+        case .changePassword, .deleteUser, .getUserList:
             return .bearer
         default:
             return .none
