@@ -24,3 +24,8 @@ struct User: Decodable {
     let role: String?
     let email: String?
 }
+
+struct Valid {
+    var isValid = false
+    var message = ""
+}

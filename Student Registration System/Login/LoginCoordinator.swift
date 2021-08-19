@@ -18,6 +18,16 @@ class LoginCoordinator: BaseCoordinator {
     
     override func start() {
         let vc = LoginViewController()
+        vc.viewModelBuilder = {
+            let viewModel = LoginViewModel(input: $0, apiService: ApiService.shared)
+            viewModel.loginSuccess = {
+                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let sceneDelegate = windowScene.delegate as? SceneDelegate  else {
+                    return
+                  }
+                AppCoordinator(window: sceneDelegate.window!).start()
+            }
+            return viewModel
+        }
         router.push(vc, isAnimated: true, onNavigationBack: isCompleted)
     }
 }

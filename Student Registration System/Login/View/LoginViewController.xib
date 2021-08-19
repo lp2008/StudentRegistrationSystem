@@ -8,9 +8,17 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Student_Registration_System" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="TZ2-2a-ypZ" id="ipc-jh-RDb"/>
+                <outlet property="passwordTextField" destination="hv3-Xu-f1j" id="DNA-TT-VLE"/>
+                <outlet property="submitButton" destination="kwh-gO-Msx" id="56S-5T-biu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,9 +27,49 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TZ2-2a-ypZ">
+                    <rect key="frame" x="20" y="261" width="374" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="lAZ-93-NLo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKq-RF-qzj">
+                    <rect key="frame" x="20" y="341" width="81.5" height="21.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hv3-Xu-f1j">
+                    <rect key="frame" x="20" y="378.5" width="374" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="PS0-Eb-EDO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kwh-gO-Msx">
+                    <rect key="frame" x="20" y="490.5" width="374" height="48"/>
+                    <color key="backgroundColor" red="0.20392156862745098" green="0.49251776638389733" blue="0.52412563047680016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="WnB-ge-5xu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="-94" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Submit">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Registration System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ps-iw-jAW">
                     <rect key="frame" x="45" y="144" width="324" height="30"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7B6-6E-H1x">
+                    <rect key="frame" x="20" y="224" width="45.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -29,8 +77,21 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="7B6-6E-H1x" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="27O-d4-M93"/>
+                <constraint firstItem="ZKq-RF-qzj" firstAttribute="top" secondItem="TZ2-2a-ypZ" secondAttribute="bottom" constant="32" id="GTr-Jo-eUW"/>
+                <constraint firstItem="ZKq-RF-qzj" firstAttribute="leading" secondItem="TZ2-2a-ypZ" secondAttribute="leading" id="KIT-2o-5VG"/>
+                <constraint firstItem="TZ2-2a-ypZ" firstAttribute="top" secondItem="7B6-6E-H1x" secondAttribute="bottom" constant="16" id="PDl-CI-DvN"/>
                 <constraint firstItem="7Ps-iw-jAW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="S6m-br-gtg"/>
                 <constraint firstItem="7Ps-iw-jAW" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SDe-2a-Jbn"/>
+                <constraint firstItem="hv3-Xu-f1j" firstAttribute="top" secondItem="ZKq-RF-qzj" secondAttribute="bottom" constant="16" id="YaM-8Q-AuR"/>
+                <constraint firstItem="kwh-gO-Msx" firstAttribute="top" secondItem="hv3-Xu-f1j" secondAttribute="bottom" constant="64" id="ajR-mN-GyA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kwh-gO-Msx" secondAttribute="trailing" constant="20" id="hQP-mT-463"/>
+                <constraint firstItem="7B6-6E-H1x" firstAttribute="top" secondItem="7Ps-iw-jAW" secondAttribute="bottom" constant="50" id="niT-Yh-3Gg"/>
+                <constraint firstItem="hv3-Xu-f1j" firstAttribute="leading" secondItem="ZKq-RF-qzj" secondAttribute="leading" id="rkD-Oh-t01"/>
+                <constraint firstItem="kwh-gO-Msx" firstAttribute="leading" secondItem="hv3-Xu-f1j" secondAttribute="leading" id="tLi-Jo-YIm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TZ2-2a-ypZ" secondAttribute="trailing" constant="20" id="vj9-1R-x5y"/>
+                <constraint firstItem="TZ2-2a-ypZ" firstAttribute="leading" secondItem="7B6-6E-H1x" secondAttribute="leading" id="yn0-t2-Wab"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hv3-Xu-f1j" secondAttribute="trailing" constant="20" id="zcB-fg-AQl"/>
             </constraints>
             <point key="canvasLocation" x="122" y="117"/>
         </view>
