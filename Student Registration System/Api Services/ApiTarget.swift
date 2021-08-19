@@ -14,6 +14,7 @@ enum ApiTarget {
     case deleteUser(params: [String: Any])
     case getUserList
     case editProfile(formData: [MultipartFormData])
+    case createUser(formData: [MultipartFormData])
 }
 
 extension ApiTarget: TargetType {
@@ -33,13 +34,15 @@ extension ApiTarget: TargetType {
         case .getUserList:
             return "/users/getUserList"
         case .editProfile:
-            return "users/updateMe"
+            return "/users/updateMe"
+        case .createUser:
+            return "/users/addUser"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .login:
+        case .login, .createUser:
             return .post
         case .changePassword, .editProfile:
             return .put
@@ -58,7 +61,7 @@ extension ApiTarget: TargetType {
         switch self {
         case .login(let params), .changePassword(let params), .deleteUser(let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
-        case .editProfile(let formData):
+        case .editProfile(let formData), .createUser(let formData):
             return .uploadMultipart(formData)
         case .getUserList:
             return .requestPlain
@@ -73,7 +76,7 @@ extension ApiTarget: TargetType {
 extension ApiTarget: AccessTokenAuthorizable {
     var authorizationType: AuthorizationType? {
         switch self {
-        case .changePassword, .deleteUser, .getUserList, .editProfile:
+        case .changePassword, .deleteUser, .getUserList, .editProfile, .createUser:
             return .bearer
         default:
             return .none

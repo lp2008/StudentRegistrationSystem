@@ -39,7 +39,7 @@
                             <constraint firstAttribute="width" constant="72" id="mP9-Ll-LKO"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <state key="normal" title="Delete">
+                        <state key="normal" title="Remove">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <connections>
@@ -59,6 +59,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="deleteButton" destination="xJW-Jj-E00" id="EA4-td-aBj"/>
                 <outlet property="profileImageView" destination="5Ot-2t-Sso" id="yjm-Va-YxZ"/>
                 <outlet property="profileNameLabel" destination="auK-Nv-dgi" id="tgv-s3-gi1"/>
             </connections>

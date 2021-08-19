@@ -11,6 +11,7 @@ class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     
     @IBAction func deleteAction(_ sender: UIButton) {
         self.onTapDelete?()
@@ -35,6 +36,7 @@ class UserTableViewCell: UITableViewCell {
         let url = URL(string: AppConstants.BASE_URL + (user?.photo ?? ""))
         self.profileImageView.kf.setImage(with: url, options: [.requestModifier(Utils.sharedManager.modifier)])
         profileNameLabel.text = user?.name
+        deleteButton.isHidden = user?.role == "Admin" ? true : false
     }
     
 }

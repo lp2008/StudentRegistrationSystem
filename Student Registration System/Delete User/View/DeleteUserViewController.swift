@@ -39,7 +39,7 @@ private extension DeleteUserViewController {
     
     func setupUI() {
         
-        navigationItem.title = "Delete User"
+        navigationItem.title = "Remove User"
         
         tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)

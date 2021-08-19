@@ -29,6 +29,8 @@ class MenuCoordinator: BaseCoordinator {
                     self?.openDeleteVC()
                 } else if position == 1 {
                     self?.openEditProfileVC()
+                } else if position == 2 {
+                    self?.openAddUserVC()
                 }
             }
             viewModel.onTapLogout = {
@@ -65,6 +67,15 @@ private extension MenuCoordinator {
     
     func openEditProfileVC() {
         let coordinator = EditProfileCoordinator(router: router)
+        self.add(coordinator: coordinator)
+        coordinator.isCompleted = { [weak self] in
+            self?.remove(coordinator: coordinator)
+        }
+        coordinator.start()
+    }
+    
+    func openAddUserVC() {
+        let coordinator = AddUserCoordinator(router: router)
         self.add(coordinator: coordinator)
         coordinator.isCompleted = { [weak self] in
             self?.remove(coordinator: coordinator)
