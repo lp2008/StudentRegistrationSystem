@@ -29,6 +29,8 @@ class SharedEngine {
         userDefaults.set(user?.email, forKey: SharedKey.EMAIL_KEY)
         userDefaults.set(user?.name, forKey: SharedKey.NAME_KEY)
         userDefaults.set(user?.photo, forKey: SharedKey.PHOTO_KEY)
+        userDefaults.set(user?.dob, forKey: SharedKey.DOB_KEY)
+        userDefaults.set(user?.university, forKey: SharedKey.UNIVERSITY_KEY)
     }
     
     func getUserData() -> User? {
@@ -37,8 +39,10 @@ class SharedEngine {
         let email = userDefaults.string(forKey: SharedKey.EMAIL_KEY)
         let name = userDefaults.string(forKey: SharedKey.NAME_KEY)
         let photo = userDefaults.string(forKey: SharedKey.PHOTO_KEY)
+        let dob = userDefaults.string(forKey: SharedKey.DOB_KEY)
+        let university = userDefaults.string(forKey: SharedKey.UNIVERSITY_KEY)
         
-        return User(id: id, name: name, role: role, email: email, photo: photo)
+        return User(id: id, name: name, role: role, email: email, photo: photo, dob: dob, university: university)
     }
     
     func resetSharedEngine() {
@@ -61,4 +65,6 @@ class SharedKey {
     public static let EMAIL_KEY = "email"
     public static let ID_KEY = "id"
     public static let PHOTO_KEY = "photo"
+    public static let DOB_KEY = "dob"
+    public static let UNIVERSITY_KEY = "university"
 }

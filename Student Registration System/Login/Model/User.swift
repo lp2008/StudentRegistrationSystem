@@ -24,6 +24,8 @@ struct User: Decodable {
     let role: String?
     let email: String?
     let photo: String?
+    let dob: String?
+    let university: String?
 }
 
 struct Valid {

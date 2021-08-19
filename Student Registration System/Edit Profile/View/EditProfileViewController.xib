@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfileViewController" customModule="Student_Registration_System" customModuleProvider="target">
+            <connections>
+                <outlet property="dobTextField" destination="sGP-m6-AG6" id="7DH-3h-JP8"/>
+                <outlet property="nameTextField" destination="eTH-Hc-f45" id="sei-9e-QcB"/>
+                <outlet property="profileImageView" destination="0rj-ST-SxX" id="zID-jg-hPP"/>
+                <outlet property="submitButton" destination="orW-h8-A5g" id="R1f-ke-Om4"/>
+                <outlet property="universityTextField" destination="q6g-3y-BZh" id="AWM-s2-ext"/>
+                <outlet property="uploadButton" destination="nc3-rH-Szn" id="KIH-7u-P3d"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hC-60-nMB">
+                    <rect key="frame" x="20" y="316" width="49.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTH-Hc-f45">
+                    <rect key="frame" x="20" y="345" width="374" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="EdP-5z-zih"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="0rj-ST-SxX">
+                    <rect key="frame" x="127" y="68.5" width="160" height="159"/>
+                    <color key="tintColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.52412563050000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="kDH-Yd-k5u"/>
+                        <constraint firstAttribute="width" constant="160" id="lrA-aV-GQ6"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nc3-rH-Szn">
+                    <rect key="frame" x="122" y="236" width="170" height="32"/>
+                    <color key="backgroundColor" red="0.20392156859999999" green="0.4925177664" blue="0.52412563050000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="QdJ-fE-tZa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Upload Profile Photo">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Birth (YYYY-MM-DD)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFV-r4-g7o">
+                    <rect key="frame" x="20" y="409" width="244" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGP-m6-AG6">
+                    <rect key="frame" x="20" y="438" width="374" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="w6W-ri-ltp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lhs-Bc-NDl">
+                    <rect key="frame" x="20" y="502" width="85" height="21"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="University" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6g-3y-BZh">
+                    <rect key="frame" x="20" y="531" width="374" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="fk4-wZ-NER"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="orW-h8-A5g">
+                    <rect key="frame" x="20" y="611" width="374" height="48"/>
+                    <color key="backgroundColor" red="0.20392156859999999" green="0.4925177664" blue="0.52412563050000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Ew9-Pl-hpd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="-94" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Submit">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="orW-h8-A5g" firstAttribute="trailing" secondItem="q6g-3y-BZh" secondAttribute="trailing" id="4XP-A0-Hjs"/>
+                <constraint firstItem="sGP-m6-AG6" firstAttribute="trailing" secondItem="eTH-Hc-f45" secondAttribute="trailing" id="6ow-r1-TDE"/>
+                <constraint firstItem="nc3-rH-Szn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8he-S2-rpn"/>
+                <constraint firstItem="eTH-Hc-f45" firstAttribute="leading" secondItem="5hC-60-nMB" secondAttribute="leading" id="BMh-hE-rgX"/>
+                <constraint firstItem="orW-h8-A5g" firstAttribute="leading" secondItem="q6g-3y-BZh" secondAttribute="leading" id="D49-S9-0Ql"/>
+                <constraint firstItem="eTH-Hc-f45" firstAttribute="top" secondItem="5hC-60-nMB" secondAttribute="bottom" constant="8" id="DKY-bv-Pjh"/>
+                <constraint firstItem="5hC-60-nMB" firstAttribute="top" secondItem="nc3-rH-Szn" secondAttribute="bottom" constant="48" id="DT2-Ml-eDc"/>
+                <constraint firstItem="sGP-m6-AG6" firstAttribute="top" secondItem="hFV-r4-g7o" secondAttribute="bottom" constant="8" id="GQp-HH-ycG"/>
+                <constraint firstItem="nc3-rH-Szn" firstAttribute="top" secondItem="0rj-ST-SxX" secondAttribute="bottom" constant="8" symbolic="YES" id="GWR-tN-K1I"/>
+                <constraint firstItem="orW-h8-A5g" firstAttribute="top" secondItem="q6g-3y-BZh" secondAttribute="bottom" constant="32" id="HG8-nL-X1f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eTH-Hc-f45" secondAttribute="trailing" constant="20" id="Isc-i6-CM7"/>
+                <constraint firstItem="hFV-r4-g7o" firstAttribute="top" secondItem="eTH-Hc-f45" secondAttribute="bottom" constant="16" id="NsQ-vv-Zwg"/>
+                <constraint firstItem="5hC-60-nMB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="PFP-RX-WDK"/>
+                <constraint firstItem="0rj-ST-SxX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PrL-uZ-3g3"/>
+                <constraint firstItem="q6g-3y-BZh" firstAttribute="leading" secondItem="sGP-m6-AG6" secondAttribute="leading" id="YA5-R0-rcO"/>
+                <constraint firstItem="q6g-3y-BZh" firstAttribute="trailing" secondItem="sGP-m6-AG6" secondAttribute="trailing" id="ZFV-bt-DWF"/>
+                <constraint firstItem="Lhs-Bc-NDl" firstAttribute="leading" secondItem="hFV-r4-g7o" secondAttribute="leading" id="dWk-th-lYX"/>
+                <constraint firstItem="hFV-r4-g7o" firstAttribute="leading" secondItem="5hC-60-nMB" secondAttribute="leading" id="jxK-J7-Any"/>
+                <constraint firstItem="0rj-ST-SxX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="nI3-qS-X6a"/>
+                <constraint firstItem="sGP-m6-AG6" firstAttribute="leading" secondItem="eTH-Hc-f45" secondAttribute="leading" id="wTa-Ji-k3V"/>
+                <constraint firstItem="Lhs-Bc-NDl" firstAttribute="top" secondItem="sGP-m6-AG6" secondAttribute="bottom" constant="16" id="z7R-Cg-oi8"/>
+                <constraint firstItem="q6g-3y-BZh" firstAttribute="top" secondItem="Lhs-Bc-NDl" secondAttribute="bottom" constant="8" id="zm6-2y-pm3"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="122.54464285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

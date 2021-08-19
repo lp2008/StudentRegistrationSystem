@@ -13,6 +13,7 @@ enum ApiTarget {
     case changePassword(params: [String: Any])
     case deleteUser(params: [String: Any])
     case getUserList
+    case editProfile(formData: [MultipartFormData])
 }
 
 extension ApiTarget: TargetType {
@@ -31,6 +32,8 @@ extension ApiTarget: TargetType {
             return "/users/deleteUser"
         case .getUserList:
             return "/users/getUserList"
+        case .editProfile:
+            return "users/updateMe"
         }
     }
     
@@ -38,7 +41,7 @@ extension ApiTarget: TargetType {
         switch self {
         case .login:
             return .post
-        case .changePassword:
+        case .changePassword, .editProfile:
             return .put
         case .deleteUser:
             return .delete
@@ -55,6 +58,8 @@ extension ApiTarget: TargetType {
         switch self {
         case .login(let params), .changePassword(let params), .deleteUser(let params):
             return .requestParameters(parameters: params, encoding: JSONEncoding.default)
+        case .editProfile(let formData):
+            return .uploadMultipart(formData)
         case .getUserList:
             return .requestPlain
         }
@@ -68,7 +73,7 @@ extension ApiTarget: TargetType {
 extension ApiTarget: AccessTokenAuthorizable {
     var authorizationType: AuthorizationType? {
         switch self {
-        case .changePassword, .deleteUser, .getUserList:
+        case .changePassword, .deleteUser, .getUserList, .editProfile:
             return .bearer
         default:
             return .none
