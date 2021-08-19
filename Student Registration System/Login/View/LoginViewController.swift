@@ -38,6 +38,8 @@ class LoginViewController: UIViewController {
 private extension LoginViewController {
     
     func setupUI() {
+        emailTextField.text = "mindfreakicup33@gmail.com"
+        passwordTextField.text = "test1234"
     }
     
     func setupBinding() {
@@ -52,9 +54,9 @@ private extension LoginViewController {
             .drive(onNext: { result in
                 if let data = result {
                     if (data.status ?? false) {
-                        SharedEngine.shared.saveAccessToken(token: result?.token ?? "")
-                        SharedEngine.shared.saveUserData(user: result?.data?.user)
-                        self.viewModel.loginSuccess?()
+                        SharedEngine.shared.saveAccessToken(token: data.token ?? "")
+                        SharedEngine.shared.saveUserData(user: data.data?.user)
+                        self.viewModel.loginSuccess?(data.data?.user?.role ?? "")
                     } else {
                         Loaf("Login failed.", state: .error, sender: self).show()
                     }

@@ -12,8 +12,6 @@ class AppCoordinator: BaseCoordinator {
     private let window: UIWindow
     private let navigationController: UINavigationController = {
         let navigationController = UINavigationController()
-        navigationController.interactivePopGestureRecognizer?.isEnabled = true
-        navigationController.navigationBar.isHidden = true
         return navigationController
     }()
     

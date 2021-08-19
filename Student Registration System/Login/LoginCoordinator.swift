@@ -20,14 +20,23 @@ class LoginCoordinator: BaseCoordinator {
         let vc = LoginViewController()
         vc.viewModelBuilder = {
             let viewModel = LoginViewModel(input: $0, apiService: ApiService.shared)
-            viewModel.loginSuccess = {
-                guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene, let sceneDelegate = windowScene.delegate as? SceneDelegate  else {
-                    return
-                  }
-                AppCoordinator(window: sceneDelegate.window!).start()
+            viewModel.loginSuccess = { role in
+                self.openMenu(role: role)
             }
             return viewModel
         }
         router.push(vc, isAnimated: true, onNavigationBack: isCompleted)
+    }
+}
+
+private extension LoginCoordinator {
+    
+    func openMenu(role: String) {
+        let coordinator = MenuCoordinator(router: router, role: role)
+        self.add(coordinator: coordinator)
+        coordinator.isCompleted = { [weak self] in
+            self?.remove(coordinator: coordinator)
+        }
+        coordinator.start()
     }
 }

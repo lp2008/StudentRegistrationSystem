@@ -24,7 +24,7 @@ protocol LoginViewPresentable {
     var output: LoginViewPresentable.Output { get }
     var validate: LoginViewPresentable.Validate { get }
     
-    var loginSuccess: (() -> Void)? { get }
+    var loginSuccess: ((_ role: String) -> Void)? { get }
 }
 
 class LoginViewModel: LoginViewPresentable {
@@ -33,7 +33,7 @@ class LoginViewModel: LoginViewPresentable {
     var output: LoginViewPresentable.Output
     var validate: LoginViewPresentable.Validate
     
-    var loginSuccess: (() -> Void)?
+    var loginSuccess: ((_ role: String) -> Void)?
     
     typealias Validation = (validate: BehaviorRelay<Valid>, ())
     private let validation: Validation = (validate: BehaviorRelay<Valid>(value: Valid()), ())
