@@ -37,14 +37,18 @@ private extension MenuViewController {
     
     func setupUI() {
         
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.largeTitleDisplayMode = .automatic
         navigationItem.title = "Menu"
         navigationItem.hidesBackButton = true
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutTapped))
         
         tableView.tableFooterView = UIView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         tableView.delegate = self
+    }
+    
+    @objc func logoutTapped() {
+        self.viewModel.onTapLogout?()
     }
     
     func setupBinding() {
@@ -60,6 +64,6 @@ private extension MenuViewController {
 extension MenuViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.viewModel.onTapMenu?(indexPath.row)
     }
 }

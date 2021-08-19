@@ -25,13 +25,17 @@ protocol MenuViewPresentable {
     var input: MenuViewPresentable.Input { get }
     var output: MenuViewPresentable.Output { get }
     
-    func getMenuName(position: Int) -> String
+    var onTapMenu: ((_ position: Int) -> Void)? { get }
+    var onTapLogout: (() -> Void)? { get }
 }
 
 class MenuViewModel: MenuViewPresentable {
     
     var input: MenuViewPresentable.Input
     var output: MenuViewPresentable.Output
+    
+    var onTapMenu: ((_ position: Int) -> Void)?
+    var onTapLogout: (() -> Void)?
     
     typealias State = (
         menuOptions: BehaviorRelay<[String]>,
