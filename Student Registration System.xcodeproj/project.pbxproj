@@ -53,6 +53,14 @@
 		5312D11726CE7BD400B5EBA0 /* AddUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5312D11526CE7BD400B5EBA0 /* AddUserViewController.xib */; };
 		5312D11A26CE89F600B5EBA0 /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D11926CE89F600B5EBA0 /* AddUserViewModel.swift */; };
 		5312D11C26CE8E3500B5EBA0 /* AddUserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D11B26CE8E3500B5EBA0 /* AddUserCoordinator.swift */; };
+		5312D12126CE902800B5EBA0 /* ManageUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D11F26CE902800B5EBA0 /* ManageUserViewController.swift */; };
+		5312D12226CE902800B5EBA0 /* ManageUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5312D12026CE902800B5EBA0 /* ManageUserViewController.xib */; };
+		5312D12526CE907500B5EBA0 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D12426CE907500B5EBA0 /* UserListViewModel.swift */; };
+		5312D12726CE914100B5EBA0 /* UserListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D12626CE914100B5EBA0 /* UserListCoordinator.swift */; };
+		5312D12A26CE942B00B5EBA0 /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D12826CE942B00B5EBA0 /* EditUserViewController.swift */; };
+		5312D12B26CE942B00B5EBA0 /* EditUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5312D12926CE942B00B5EBA0 /* EditUserViewController.xib */; };
+		5312D12D26CE95F400B5EBA0 /* EditUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D12C26CE95F400B5EBA0 /* EditUserViewModel.swift */; };
+		5312D12F26CE97B800B5EBA0 /* ManageUserCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D12E26CE97B800B5EBA0 /* ManageUserCoordinator.swift */; };
 		550F5218C9842DA1234A8F97 /* Pods_Student_Registration_System.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E32502ECA1C2A41C274ACCAF /* Pods_Student_Registration_System.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +113,14 @@
 		5312D11526CE7BD400B5EBA0 /* AddUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddUserViewController.xib; sourceTree = "<group>"; };
 		5312D11926CE89F600B5EBA0 /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
 		5312D11B26CE8E3500B5EBA0 /* AddUserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserCoordinator.swift; sourceTree = "<group>"; };
+		5312D11F26CE902800B5EBA0 /* ManageUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageUserViewController.swift; sourceTree = "<group>"; };
+		5312D12026CE902800B5EBA0 /* ManageUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ManageUserViewController.xib; sourceTree = "<group>"; };
+		5312D12426CE907500B5EBA0 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		5312D12626CE914100B5EBA0 /* UserListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListCoordinator.swift; sourceTree = "<group>"; };
+		5312D12826CE942B00B5EBA0 /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
+		5312D12926CE942B00B5EBA0 /* EditUserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditUserViewController.xib; sourceTree = "<group>"; };
+		5312D12C26CE95F400B5EBA0 /* EditUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewModel.swift; sourceTree = "<group>"; };
+		5312D12E26CE97B800B5EBA0 /* ManageUserCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageUserCoordinator.swift; sourceTree = "<group>"; };
 		66F3A5017113A793108CEDCC /* Pods-Student Registration System.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Registration System.release.xcconfig"; path = "Target Support Files/Pods-Student Registration System/Pods-Student Registration System.release.xcconfig"; sourceTree = "<group>"; };
 		E32502ECA1C2A41C274ACCAF /* Pods_Student_Registration_System.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Student_Registration_System.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CC563277CCE143CFDDA21F /* Pods-Student Registration System.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Student Registration System.debug.xcconfig"; path = "Target Support Files/Pods-Student Registration System/Pods-Student Registration System.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +159,7 @@
 		5312D09826CD862700B5EBA0 /* Student Registration System */ = {
 			isa = PBXGroup;
 			children = (
+				5312D11D26CE8FF400B5EBA0 /* Manage User */,
 				5312D11226CE7BC000B5EBA0 /* Add User */,
 				5312D10426CE6D7D00B5EBA0 /* Edit Profile */,
 				5312D0F226CE55BB00B5EBA0 /* Delete User */,
@@ -410,6 +427,37 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		5312D11D26CE8FF400B5EBA0 /* Manage User */ = {
+			isa = PBXGroup;
+			children = (
+				5312D12326CE906000B5EBA0 /* View Model */,
+				5312D11E26CE901900B5EBA0 /* View */,
+				5312D12626CE914100B5EBA0 /* UserListCoordinator.swift */,
+				5312D12E26CE97B800B5EBA0 /* ManageUserCoordinator.swift */,
+			);
+			path = "Manage User";
+			sourceTree = "<group>";
+		};
+		5312D11E26CE901900B5EBA0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5312D11F26CE902800B5EBA0 /* ManageUserViewController.swift */,
+				5312D12026CE902800B5EBA0 /* ManageUserViewController.xib */,
+				5312D12826CE942B00B5EBA0 /* EditUserViewController.swift */,
+				5312D12926CE942B00B5EBA0 /* EditUserViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5312D12326CE906000B5EBA0 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				5312D12426CE907500B5EBA0 /* UserListViewModel.swift */,
+				5312D12C26CE95F400B5EBA0 /* EditUserViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		95B9D43846E8D43B21E52F97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,8 +534,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5312D12226CE902800B5EBA0 /* ManageUserViewController.xib in Resources */,
 				5312D10126CE58C800B5EBA0 /* UserTableViewCell.xib in Resources */,
 				5312D11726CE7BD400B5EBA0 /* AddUserViewController.xib in Resources */,
+				5312D12B26CE942B00B5EBA0 /* EditUserViewController.xib in Resources */,
 				5312D0A626CD862700B5EBA0 /* LaunchScreen.storyboard in Resources */,
 				5312D0F726CE55D700B5EBA0 /* DeleteUserViewController.xib in Resources */,
 				5312D0A326CD862700B5EBA0 /* Assets.xcassets in Resources */,
@@ -549,16 +599,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				5312D0D326CDA72100B5EBA0 /* SharedEngine.swift in Sources */,
+				5312D12526CE907500B5EBA0 /* UserListViewModel.swift in Sources */,
 				5312D0C226CD890800B5EBA0 /* RouterProtocol.swift in Sources */,
+				5312D12A26CE942B00B5EBA0 /* EditUserViewController.swift in Sources */,
 				5312D0C026CD88F100B5EBA0 /* Router.swift in Sources */,
 				5312D0E026CE3EA900B5EBA0 /* MenuViewModel.swift in Sources */,
 				5312D0BC26CD88C700B5EBA0 /* LoginViewController.swift in Sources */,
 				5312D0D526CE3BFE00B5EBA0 /* LoginViewModel.swift in Sources */,
+				5312D12D26CE95F400B5EBA0 /* EditUserViewModel.swift in Sources */,
 				5312D0E626CE458400B5EBA0 /* ChangePasswordViewController.swift in Sources */,
 				5312D0B926CD889E00B5EBA0 /* LoginCoordinator.swift in Sources */,
 				5312D11A26CE89F600B5EBA0 /* AddUserViewModel.swift in Sources */,
 				5312D10826CE6D9800B5EBA0 /* EditProfileViewController.swift in Sources */,
 				5312D09A26CD862700B5EBA0 /* AppDelegate.swift in Sources */,
+				5312D12126CE902800B5EBA0 /* ManageUserViewController.swift in Sources */,
 				5312D0EB26CE471500B5EBA0 /* ChangePasswordViewModel.swift in Sources */,
 				5312D11126CE776700B5EBA0 /* EditProfileCoordinator.swift in Sources */,
 				5312D09C26CD862700B5EBA0 /* SceneDelegate.swift in Sources */,
@@ -567,6 +621,7 @@
 				5312D10C26CE6FD300B5EBA0 /* EditProfileViewModel.swift in Sources */,
 				5312D0D726CE3CA400B5EBA0 /* Utils.swift in Sources */,
 				5312D11626CE7BD400B5EBA0 /* AddUserViewController.swift in Sources */,
+				5312D12726CE914100B5EBA0 /* UserListCoordinator.swift in Sources */,
 				5312D0F026CE47F700B5EBA0 /* ServerResponse.swift in Sources */,
 				5312D10326CE5C0400B5EBA0 /* DeleteUserCoordinator.swift in Sources */,
 				5312D0B326CD884D00B5EBA0 /* Coordinator.swift in Sources */,
@@ -579,6 +634,7 @@
 				5312D0CE26CDA5CA00B5EBA0 /* AppConstants.swift in Sources */,
 				5312D0C826CDA4A900B5EBA0 /* User.swift in Sources */,
 				5312D0ED26CE472100B5EBA0 /* ChangePasswordCoordinator.swift in Sources */,
+				5312D12F26CE97B800B5EBA0 /* ManageUserCoordinator.swift in Sources */,
 				5312D11C26CE8E3500B5EBA0 /* AddUserCoordinator.swift in Sources */,
 				5312D0F626CE55D700B5EBA0 /* DeleteUserViewController.swift in Sources */,
 				5312D0E226CE408F00B5EBA0 /* MenuCoordinator.swift in Sources */,

@@ -38,8 +38,6 @@ class LoginViewController: UIViewController {
 private extension LoginViewController {
     
     func setupUI() {
-        emailTextField.text = "mindfreakicup33@gmail.com"
-        passwordTextField.text = "test1234"
     }
     
     func setupBinding() {

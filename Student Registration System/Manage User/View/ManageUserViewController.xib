@@ -9,9 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Student_Registration_System" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ManageUserViewController" customModule="Student_Registration_System" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="BtO-KT-Ii7" id="mXP-BZ-aqd"/>
+                <outlet property="tableView" destination="Bc5-lv-QFb" id="Yda-Z2-5gG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,20 +20,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BtO-KT-Ii7">
-                    <rect key="frame" x="0.0" y="60" width="414" height="802"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bc5-lv-QFb">
+                    <rect key="frame" x="8" y="52" width="398" height="802"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="BtO-KT-Ii7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="05a-rx-VUh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BtO-KT-Ii7" secondAttribute="bottom" id="7t7-t4-9is"/>
-                <constraint firstItem="BtO-KT-Ii7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="QYa-MJ-VAD"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BtO-KT-Ii7" secondAttribute="trailing" id="m9f-wx-9kC"/>
+                <constraint firstItem="Bc5-lv-QFb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="8" id="2Ag-ct-nvk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bc5-lv-QFb" secondAttribute="trailing" constant="8" id="9Mu-ku-kSV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Bc5-lv-QFb" secondAttribute="bottom" constant="8" id="9WY-p9-bzg"/>
+                <constraint firstItem="Bc5-lv-QFb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="qxF-vq-i9b"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="92"/>
+            <point key="canvasLocation" x="139" y="123"/>
         </view>
     </objects>
     <resources>
